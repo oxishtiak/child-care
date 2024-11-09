@@ -2,4 +2,10 @@
 
 {% block body %}
     <h1>Welcome to Django</h1>
+
+    {% if user.is_authenticated %}
+        You are logged in as {{ user.username }}.
+    {% else %}
+        You are not logged in.
+    {% endif %}
 {% endblock body %}

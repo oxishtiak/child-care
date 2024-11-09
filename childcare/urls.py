@@ -23,6 +23,9 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+
+    # apps urls
+    path("", include("accounts.urls")),
 ]
 
 if settings.DEBUG:

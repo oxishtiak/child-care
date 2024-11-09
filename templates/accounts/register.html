@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+    <main class="container">
+        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Create Account</h3>
+
+        <form method="post" class="my-class">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
+{% endblock body %}
